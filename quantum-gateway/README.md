@@ -57,7 +57,7 @@ Q = M ∘ U(θ) ∘ ε
 
 ```bash
 # Clone the repository
-git clone https://github.com/taidnguyen/quantum-gateway.git
+git clone https://github.com/DucTaiNguyen/quantum-gateway.git
 cd quantum-gateway
 
 # Install dependencies
