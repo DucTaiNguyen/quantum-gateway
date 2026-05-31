@@ -201,7 +201,7 @@ This project is released under a **Commercial Source License**.
 
 **For commercial licensing, enterprise deployment, or research partnerships:**
 
-📧 [contact@quantumgateway.dev](mailto:contact@quantumgateway.dev)
+📧 [contact@quantumgateway.dev](mailto:nguyenductai50002000@gmail.com)
 
 ---
 
