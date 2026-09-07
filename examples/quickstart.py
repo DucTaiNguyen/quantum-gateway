@@ -21,7 +21,8 @@ Run:
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 import numpy as np
 
@@ -99,10 +100,7 @@ for t in thetas:
 print("─── Noisy Simulation (Kraus Model) ──────────────────────────")
 noise = KrausNoiseModel(depolarizing_rate=0.02, amplitude_damping_rate=0.01)
 qg_noisy = QuantumGateway(
-    n_qubits=2,
-    encoding="angle",
-    backend="statevector",
-    noise_model=noise
+    n_qubits=2, encoding="angle", backend="statevector", noise_model=noise
 )
 noisy_result = qg_noisy.transform(data, theta=theta, shots=1024)
 print(f"  Noise summary: {noise.kraus_summary()}")
