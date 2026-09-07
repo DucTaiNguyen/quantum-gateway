@@ -1,0 +1,58 @@
+{
+  "experiment": "QDK-011B",
+  "title": "Scale-Normalized Noise-Trajectory Robustness",
+  "source": "results/qdk_009/QDK-009-STATISTICAL-VALIDATION.json",
+  "trajectory_points": 21,
+  "normalization": "Each mean trajectory is divided by the absolute initial amplitude |C(0)|.",
+  "raw_euclidean_distance": {
+    "STRUCTURED_vs_WEAK": 1.835294436627773,
+    "STRUCTURED_vs_ASYMMETRIC": 1.0432351928726218,
+    "WEAK_vs_ASYMMETRIC": 0.792064851164422
+  },
+  "normalized_euclidean_distance": {
+    "STRUCTURED_vs_WEAK": 0.0050604532677799505,
+    "STRUCTURED_vs_ASYMMETRIC": 0.006051223258339558,
+    "WEAK_vs_ASYMMETRIC": 0.007786365762509458
+  },
+  "normalized_cosine_distance": {
+    "STRUCTURED_vs_WEAK": 1.1160543791355337e-06,
+    "STRUCTURED_vs_ASYMMETRIC": 1.5724379163195579e-06,
+    "WEAK_vs_ASYMMETRIC": 2.5407571079272273e-06
+  },
+  "normalized_area_between_curves": {
+    "STRUCTURED_vs_WEAK": 0.0009208306131787016,
+    "STRUCTURED_vs_ASYMMETRIC": 0.0011415162573999206,
+    "WEAK_vs_ASYMMETRIC": 0.0013598374249230902
+  },
+  "raw_to_normalized_distance_ratio": {
+    "STRUCTURED_vs_WEAK": 362.67392257392135,
+    "STRUCTURED_vs_ASYMMETRIC": 172.40071111818196,
+    "WEAK_vs_ASYMMETRIC": 101.724588251188
+  },
+  "ci95_band_nonoverlap": {
+    "STRUCTURED_vs_WEAK": {
+      "points_nonoverlapping": 21,
+      "total_points": 21,
+      "fraction_nonoverlapping": 1.0
+    },
+    "STRUCTURED_vs_ASYMMETRIC": {
+      "points_nonoverlapping": 21,
+      "total_points": 21,
+      "fraction_nonoverlapping": 1.0
+    },
+    "WEAK_vs_ASYMMETRIC": {
+      "points_nonoverlapping": 21,
+      "total_points": 21,
+      "fraction_nonoverlapping": 1.0
+    }
+  },
+  "min_raw_distance": 0.792064851164422,
+  "max_raw_distance": 1.835294436627773,
+  "min_normalized_distance": 0.0050604532677799505,
+  "max_normalized_distance": 0.007786365762509458,
+  "interpretation": {
+    "stronger_shape_evidence": "Normalized trajectory distances remain materially nonzero, indicating separation beyond simple initial-amplitude differences.",
+    "amplitude_dominated": "Normalized trajectory distances collapse toward zero, indicating that raw separation is primarily explained by amplitude scaling.",
+    "warning": "This is a robustness/descriptive analysis, not a formal hypothesis test or p-value."
+  }
+}
