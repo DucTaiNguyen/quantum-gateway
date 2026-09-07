@@ -1,0 +1,222 @@
+{
+  "experiment": "QDK-023",
+  "title": "Statistical Fingerprint Discriminability",
+  "seed": 20260907,
+  "replicates": 200,
+  "shots": 4096,
+  "bootstrap_samples": 5000,
+  "permutation_samples": 5000,
+  "measurement_model": "finite-shot Pauli expectation Gaussian approximation",
+  "channels": {
+    "phase_damping": {
+      "within_structure": {
+        "STRUCTURED": {
+          "n_pairs": 19900,
+          "mean_distance": 4.253178943476102,
+          "std_distance": 0.4454607685052334,
+          "max_distance": 6.233980228883403,
+          "bootstrap_mean_ci95": {
+            "mean": 4.253178943476102,
+            "ci95_low": 4.247028852384943,
+            "ci95_high": 4.259477988409201
+          }
+        },
+        "WEAK": {
+          "n_pairs": 19900,
+          "mean_distance": 4.233440351137822,
+          "std_distance": 0.44624992601558827,
+          "max_distance": 5.970455450613157,
+          "bootstrap_mean_ci95": {
+            "mean": 4.233440351137822,
+            "ci95_low": 4.227166255275075,
+            "ci95_high": 4.239546948483941
+          }
+        },
+        "ASYMMETRIC": {
+          "n_pairs": 19900,
+          "mean_distance": 0.11380947268667543,
+          "std_distance": 0.014250765578454547,
+          "max_distance": 0.18463149537769802,
+          "bootstrap_mean_ci95": {
+            "mean": 0.11380947268667543,
+            "ci95_low": 0.11360778764919353,
+            "ci95_high": 0.11400694751803757
+          }
+        }
+      },
+      "between_structure": {
+        "STRUCTURED_vs_WEAK": {
+          "n_pairs": 40000,
+          "mean_distance": 4.243755553883348,
+          "std_distance": 0.44657676003757596,
+          "min_distance": 2.393829561649205,
+          "max_distance": 6.058900169949598,
+          "bootstrap_mean_ci95": {
+            "mean": 4.243755553883348,
+            "ci95_low": 4.239439620959817,
+            "ci95_high": 4.248161541070974
+          },
+          "descriptive_effect_vs_A_within": 0.021127770787073986
+        },
+        "STRUCTURED_vs_ASYMMETRIC": {
+          "n_pairs": 40000,
+          "mean_distance": 7.145124286020277,
+          "std_distance": 0.4514988226917078,
+          "min_distance": 6.067433480672437,
+          "max_distance": 8.266363959273187,
+          "bootstrap_mean_ci95": {
+            "mean": 7.145124286020277,
+            "ci95_low": 7.140748261475643,
+            "ci95_high": 7.149706888828494
+          },
+          "descriptive_effect_vs_A_within": 6.448183057419986
+        },
+        "WEAK_vs_ASYMMETRIC": {
+          "n_pairs": 40000,
+          "mean_distance": 7.10596867768339,
+          "std_distance": 0.4407622292499778,
+          "min_distance": 6.105793357138297,
+          "max_distance": 8.244715272355714,
+          "bootstrap_mean_ci95": {
+            "mean": 7.10596867768339,
+            "ci95_low": 7.101529218185942,
+            "ci95_high": 7.11030802551994
+          },
+          "descriptive_effect_vs_A_within": 6.4767395515789
+        }
+      },
+      "discriminability": {
+        "mean_between_distance": 6.164949505862338,
+        "mean_within_distance": 2.8668095891002,
+        "between_within_ratio": 2.1504565665267354,
+        "between_bootstrap_ci95": {
+          "mean": 6.164949505862338,
+          "ci95_low": 6.156726462780667,
+          "ci95_high": 6.173354759829702
+        },
+        "within_bootstrap_ci95": {
+          "mean": 2.8668095891002,
+          "ci95_low": 2.851256897698476,
+          "ci95_high": 2.8830746325250027
+        }
+      },
+      "permutation_test": {
+        "observed_statistic": 0.3240694963542694,
+        "permutation_p_value": 0.0001999600079984003,
+        "permutations": 5000
+      }
+    },
+    "amplitude_damping": {
+      "within_structure": {
+        "STRUCTURED": {
+          "n_pairs": 19900,
+          "mean_distance": 2.986855943484562,
+          "std_distance": 0.4542469183068513,
+          "max_distance": 4.733140549541848,
+          "bootstrap_mean_ci95": {
+            "mean": 2.986855943484562,
+            "ci95_low": 2.9803352732865775,
+            "ci95_high": 2.9931305453865615
+          }
+        },
+        "WEAK": {
+          "n_pairs": 19900,
+          "mean_distance": 3.009341197462697,
+          "std_distance": 0.4531348382629013,
+          "max_distance": 4.684048518594729,
+          "bootstrap_mean_ci95": {
+            "mean": 3.009341197462697,
+            "ci95_low": 3.002879397449878,
+            "ci95_high": 3.015714375569069
+          }
+        },
+        "ASYMMETRIC": {
+          "n_pairs": 19900,
+          "mean_distance": 0.1498296181735325,
+          "std_distance": 0.013835324951159158,
+          "max_distance": 0.2004596129281921,
+          "bootstrap_mean_ci95": {
+            "mean": 0.1498296181735325,
+            "ci95_low": 0.1496412779325073,
+            "ci95_high": 0.15002047269345617
+          }
+        }
+      },
+      "between_structure": {
+        "STRUCTURED_vs_WEAK": {
+          "n_pairs": 40000,
+          "mean_distance": 3.0000178817212326,
+          "std_distance": 0.4494400833968759,
+          "min_distance": 1.2528675863341265,
+          "max_distance": 4.89350010042192,
+          "bootstrap_mean_ci95": {
+            "mean": 3.0000178817212326,
+            "ci95_low": 2.9956761129138556,
+            "ci95_high": 3.0043951053574207
+          },
+          "descriptive_effect_vs_A_within": 0.029129005992153355
+        },
+        "STRUCTURED_vs_ASYMMETRIC": {
+          "n_pairs": 40000,
+          "mean_distance": 5.131126228187463,
+          "std_distance": 0.4478903828172026,
+          "min_distance": 3.84384832330349,
+          "max_distance": 6.620074574776003,
+          "bootstrap_mean_ci95": {
+            "mean": 5.131126228187463,
+            "ci95_low": 5.126728348477012,
+            "ci95_high": 5.135492002819037
+          },
+          "descriptive_effect_vs_A_within": 4.753637955982031
+        },
+        "WEAK_vs_ASYMMETRIC": {
+          "n_pairs": 40000,
+          "mean_distance": 5.132493462901315,
+          "std_distance": 0.40476865522338495,
+          "min_distance": 3.8383029437804077,
+          "max_distance": 6.224561743234234,
+          "bootstrap_mean_ci95": {
+            "mean": 5.132493462901315,
+            "ci95_low": 5.128574026699219,
+            "ci95_high": 5.136427429202392
+          },
+          "descriptive_effect_vs_A_within": 4.941782388802045
+        }
+      },
+      "discriminability": {
+        "mean_between_distance": 4.421212524270003,
+        "mean_within_distance": 2.0486755863735975,
+        "between_within_ratio": 2.1580832776438177,
+        "between_bootstrap_ci95": {
+          "mean": 4.421212524270003,
+          "ci95_low": 4.415176908258059,
+          "ci95_high": 4.427315900414888
+        },
+        "within_bootstrap_ci95": {
+          "mean": 2.0486755863735975,
+          "ci95_low": 2.0371241722844524,
+          "ci95_high": 2.059934439088553
+        }
+      },
+      "permutation_test": {
+        "observed_statistic": 0.16194354438907244,
+        "permutation_p_value": 0.0001999600079984003,
+        "permutations": 5000
+      }
+    }
+  },
+  "summary": {
+    "phase_damping": {
+      "between_within_ratio": 2.1504565665267354,
+      "between_mean": 6.164949505862338,
+      "within_mean": 2.8668095891002,
+      "permutation_p_value": 0.0001999600079984003
+    },
+    "amplitude_damping": {
+      "between_within_ratio": 2.1580832776438177,
+      "between_mean": 4.421212524270003,
+      "within_mean": 2.0486755863735975,
+      "permutation_p_value": 0.0001999600079984003
+    }
+  }
+}

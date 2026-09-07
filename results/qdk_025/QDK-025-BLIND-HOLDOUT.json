@@ -1,0 +1,690 @@
+{
+  "experiment": "QDK-025",
+  "title": "Blind Holdout Validation",
+  "seed": 20260907,
+  "replicates": 200,
+  "train_fraction": 0.5,
+  "chance_accuracy": 0.3333333333333333,
+  "conditions": {
+    "phase_damping__ALL__shots_1024": {
+      "accuracy": 0.68,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 204,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 48,
+          "WEAK": 52,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 44,
+          "WEAK": 56,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.48,
+        "WEAK": 0.56,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__ALL__shots_4096": {
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 198,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 50,
+          "WEAK": 50,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 52,
+          "WEAK": 48,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.5,
+        "WEAK": 0.48,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__ALL__shots_16384": {
+      "accuracy": 0.6466666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 194,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 45,
+          "WEAK": 55,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 51,
+          "WEAK": 49,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.45,
+        "WEAK": 0.49,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__CORRELATION__shots_1024": {
+      "accuracy": 0.31666666666666665,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 95,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 28,
+          "WEAK": 40,
+          "ASYMMETRIC": 32
+        },
+        "WEAK": {
+          "STRUCTURED": 36,
+          "WEAK": 34,
+          "ASYMMETRIC": 30
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 28,
+          "WEAK": 39,
+          "ASYMMETRIC": 33
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.28,
+        "WEAK": 0.34,
+        "ASYMMETRIC": 0.33
+      }
+    },
+    "phase_damping__CORRELATION__shots_4096": {
+      "accuracy": 0.32666666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 98,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 41,
+          "WEAK": 22,
+          "ASYMMETRIC": 37
+        },
+        "WEAK": {
+          "STRUCTURED": 42,
+          "WEAK": 28,
+          "ASYMMETRIC": 30
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 35,
+          "WEAK": 36,
+          "ASYMMETRIC": 29
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.41,
+        "WEAK": 0.28,
+        "ASYMMETRIC": 0.29
+      }
+    },
+    "phase_damping__CORRELATION__shots_16384": {
+      "accuracy": 0.34,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 102,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 29,
+          "WEAK": 29,
+          "ASYMMETRIC": 42
+        },
+        "WEAK": {
+          "STRUCTURED": 24,
+          "WEAK": 37,
+          "ASYMMETRIC": 39
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 32,
+          "WEAK": 32,
+          "ASYMMETRIC": 36
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.29,
+        "WEAK": 0.37,
+        "ASYMMETRIC": 0.36
+      }
+    },
+    "phase_damping__LOCAL__shots_1024": {
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 198,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 53,
+          "WEAK": 47,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 55,
+          "WEAK": 45,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.53,
+        "WEAK": 0.45,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__LOCAL__shots_4096": {
+      "accuracy": 0.61,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 183,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 37,
+          "WEAK": 63,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 54,
+          "WEAK": 46,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.37,
+        "WEAK": 0.46,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__LOCAL__shots_16384": {
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 196,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 55,
+          "WEAK": 45,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 59,
+          "WEAK": 41,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.55,
+        "WEAK": 0.41,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__MIXED__shots_1024": {
+      "accuracy": 0.6866666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 206,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 52,
+          "WEAK": 48,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 46,
+          "WEAK": 54,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.52,
+        "WEAK": 0.54,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__MIXED__shots_4096": {
+      "accuracy": 0.69,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 207,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 42,
+          "WEAK": 58,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.49,
+        "WEAK": 0.58,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "phase_damping__MIXED__shots_16384": {
+      "accuracy": 0.6733333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 202,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 47,
+          "WEAK": 53,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.49,
+        "WEAK": 0.53,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__ALL__shots_1024": {
+      "accuracy": 0.6666666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 200,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.49,
+        "WEAK": 0.51,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__ALL__shots_4096": {
+      "accuracy": 0.6866666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 206,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 57,
+          "WEAK": 43,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 51,
+          "WEAK": 49,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.57,
+        "WEAK": 0.49,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__ALL__shots_16384": {
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 198,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 43,
+          "WEAK": 57,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 45,
+          "WEAK": 55,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.43,
+        "WEAK": 0.55,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__CORRELATION__shots_1024": {
+      "accuracy": 0.7033333333333334,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 211,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 56,
+          "WEAK": 44,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 45,
+          "WEAK": 55,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.56,
+        "WEAK": 0.55,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__CORRELATION__shots_4096": {
+      "accuracy": 0.64,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 192,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 38,
+          "WEAK": 62,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 46,
+          "WEAK": 54,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.38,
+        "WEAK": 0.54,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__CORRELATION__shots_16384": {
+      "accuracy": 0.63,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 189,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 46,
+          "WEAK": 54,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 57,
+          "WEAK": 43,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.46,
+        "WEAK": 0.43,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__LOCAL__shots_1024": {
+      "accuracy": 0.6966666666666667,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 209,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 63,
+          "WEAK": 37,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 54,
+          "WEAK": 46,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.63,
+        "WEAK": 0.46,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__LOCAL__shots_4096": {
+      "accuracy": 0.6366666666666667,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 191,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 58,
+          "WEAK": 42,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.49,
+        "WEAK": 0.42,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__LOCAL__shots_16384": {
+      "accuracy": 0.65,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 195,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 48,
+          "WEAK": 52,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 53,
+          "WEAK": 47,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.48,
+        "WEAK": 0.47,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__MIXED__shots_1024": {
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 196,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 43,
+          "WEAK": 57,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 47,
+          "WEAK": 53,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.43,
+        "WEAK": 0.53,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__MIXED__shots_4096": {
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 196,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 53,
+          "WEAK": 47,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.49,
+        "WEAK": 0.47,
+        "ASYMMETRIC": 1.0
+      }
+    },
+    "amplitude_damping__MIXED__shots_16384": {
+      "accuracy": 0.68,
+      "chance_accuracy": 0.3333333333333333,
+      "correct": 204,
+      "total": 300,
+      "confusion_matrix": {
+        "STRUCTURED": {
+          "STRUCTURED": 53,
+          "WEAK": 47,
+          "ASYMMETRIC": 0
+        },
+        "WEAK": {
+          "STRUCTURED": 49,
+          "WEAK": 51,
+          "ASYMMETRIC": 0
+        },
+        "ASYMMETRIC": {
+          "STRUCTURED": 0,
+          "WEAK": 0,
+          "ASYMMETRIC": 100
+        }
+      },
+      "per_class_accuracy": {
+        "STRUCTURED": 0.53,
+        "WEAK": 0.51,
+        "ASYMMETRIC": 1.0
+      }
+    }
+  },
+  "summary": {
+    "number_of_conditions": 24,
+    "minimum_accuracy": 0.31666666666666665,
+    "median_accuracy": 0.6566666666666667,
+    "mean_accuracy": 0.6208333333333333,
+    "maximum_accuracy": 0.7033333333333334,
+    "all_conditions_above_chance": false
+  }
+}
