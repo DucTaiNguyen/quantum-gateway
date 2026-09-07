@@ -1,0 +1,22 @@
+{
+  "between_structure_distance": {
+    "STRUCTURED_vs_ASYMMETRIC": 1.0432351928726218,
+    "STRUCTURED_vs_WEAK": 1.835294436627773,
+    "WEAK_vs_ASYMMETRIC": 0.792064851164422
+  },
+  "experiment": "QDK-010A",
+  "maximum_within_mean_variation": 0.028152205806960384,
+  "minimum_between_distance": 0.792064851164422,
+  "separation_ratio": 28.13509025174116,
+  "source_experiment": "QDK-009",
+  "within_structure_mean": {
+    "ASYMMETRIC": 0.01602915691368594,
+    "STRUCTURED": 0.028152205806960384,
+    "WEAK": 0.005763411554203427
+  },
+  "within_structure_std": {
+    "ASYMMETRIC": 0.002554095068309498,
+    "STRUCTURED": 0.00427165205746097,
+    "WEAK": 0.0010459334593359408
+  }
+}
