@@ -37,7 +37,7 @@ class ProbabilisticMeasurer:
     """
 
     def __init__(self, shots: int = 1024):
-        self.shots   = shots
+        self.shots = shots
         self._backend = AerSimulator()
 
     def measure(
@@ -72,22 +72,22 @@ class ProbabilisticMeasurer:
         meas_circuit.measure_all()
 
         # Run on AerSimulator
-        job    = self._backend.run(meas_circuit, shots=shots)
+        job = self._backend.run(meas_circuit, shots=shots)
         result = job.result()
         counts = result.get_counts()
 
-        total  = sum(counts.values())
-        probs  = {bs: c / total for bs, c in counts.items()}
+        total = sum(counts.values())
+        probs = {bs: c / total for bs, c in counts.items()}
 
         # Entropy
-        p_arr   = np.array(list(probs.values()))
-        p_arr   = p_arr[p_arr > 1e-12]
+        p_arr = np.array(list(probs.values()))
+        p_arr = p_arr[p_arr > 1e-12]
         entropy = float(-np.sum(p_arr * np.log2(p_arr)))
 
         return {
-            "counts":        counts,
+            "counts": counts,
             "probabilities": probs,
-            "entropy":       entropy,
+            "entropy": entropy,
         }
 
     def __repr__(self) -> str:

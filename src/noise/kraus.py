@@ -56,9 +56,9 @@ class KrausNoiseModel:
         if not (0 <= amplitude_damping_rate <= 1):
             raise ValueError("amplitude_damping_rate must be in [0, 1]")
 
-        self.depolarizing_rate      = depolarizing_rate
+        self.depolarizing_rate = depolarizing_rate
         self.amplitude_damping_rate = amplitude_damping_rate
-        self.apply_to               = apply_to or ["cx", "ry", "rz", "rx", "h"]
+        self.apply_to = apply_to or ["cx", "ry", "rz", "rx", "h"]
 
         self._noise_model = self._build()
 
@@ -103,7 +103,7 @@ class KrausNoiseModel:
         # Attach noise model as circuit metadata
         circuit.metadata = circuit.metadata or {}
         circuit.metadata["quantum_gateway_noise"] = {
-            "depolarizing_rate":      self.depolarizing_rate,
+            "depolarizing_rate": self.depolarizing_rate,
             "amplitude_damping_rate": self.amplitude_damping_rate,
         }
         return circuit
@@ -111,12 +111,12 @@ class KrausNoiseModel:
     def kraus_summary(self) -> dict:
         """Return summary of noise parameters."""
         return {
-            "type":               "KrausNoiseModel",
-            "depolarizing_rate":  self.depolarizing_rate,
-            "amplitude_damping":  self.amplitude_damping_rate,
-            "applied_to_gates":   self.apply_to,
-            "interpretation":     "Noise as structural exploration (QG principle)",
-            "author":             "Tai D. Nguyen © 2026",
+            "type": "KrausNoiseModel",
+            "depolarizing_rate": self.depolarizing_rate,
+            "amplitude_damping": self.amplitude_damping_rate,
+            "applied_to_gates": self.apply_to,
+            "interpretation": "Noise as structural exploration (QG principle)",
+            "author": "Tai D. Nguyen © 2026",
         }
 
     def __repr__(self) -> str:

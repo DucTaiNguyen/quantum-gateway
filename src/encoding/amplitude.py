@@ -38,8 +38,8 @@ class AmplitudeEncoder:
     """
 
     def __init__(self, n_qubits: int):
-        self.n_qubits  = n_qubits
-        self.state_dim = 2 ** n_qubits
+        self.n_qubits = n_qubits
+        self.state_dim = 2**n_qubits
 
     def encode(self, data: np.ndarray) -> QuantumCircuit:
         """
@@ -77,7 +77,9 @@ class AmplitudeEncoder:
         # L2 normalize → valid quantum state
         norm = np.linalg.norm(data)
         if norm < 1e-12:
-            raise ValueError("Cannot encode zero vector: no quantum state corresponds to it.")
+            raise ValueError(
+                "Cannot encode zero vector: no quantum state corresponds to it."
+            )
         data = data / norm
 
         qc = QuantumCircuit(self.n_qubits, name="AmplitudeEncoding")

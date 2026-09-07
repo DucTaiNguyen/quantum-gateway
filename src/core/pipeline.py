@@ -36,9 +36,9 @@ class GatewayPipeline:
     """
 
     def __init__(self, encoder, evolution, measurer, noise_model=None):
-        self.encoder     = encoder
-        self.evolution   = evolution
-        self.measurer    = measurer
+        self.encoder = encoder
+        self.evolution = evolution
+        self.measurer = measurer
         self.noise_model = noise_model
         self._history: list[Dict[str, Any]] = []
 
@@ -63,14 +63,14 @@ class GatewayPipeline:
         -------
         dict with keys: counts, probabilities, entropy, elapsed_ms, metadata
         """
-        t0   = time.perf_counter()
+        t0 = time.perf_counter()
         data = np.asarray(data, dtype=float)
 
         # Stage 1 — Encoding ε
         circuit = self.encoder.encode(data)
 
         # Stage 2 — Evolution U(θ)
-        theta   = np.atleast_1d(np.asarray(theta, dtype=float))
+        theta = np.atleast_1d(np.asarray(theta, dtype=float))
         circuit = self.evolution.apply(circuit, theta)
 
         # Stage 3 — Optional noise injection
@@ -92,7 +92,7 @@ class GatewayPipeline:
                 "theta": theta.tolist(),
                 "shots": shots,
                 "noisy": self.noise_model is not None,
-            }
+            },
         }
 
         if record:

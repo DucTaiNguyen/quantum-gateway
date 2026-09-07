@@ -65,8 +65,6 @@ def tensor_to_state(tensor):
     values = array.flatten()
 
     if np.any(values < 0):
-        raise ValueError(
-            "Reference encoder requires non-negative values"
-        )
+        raise ValueError("Reference encoder requires non-negative values")
 
     return QuantumState(values.astype(complex))

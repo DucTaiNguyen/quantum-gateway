@@ -63,7 +63,7 @@ class QuantumGateway:
     """
 
     VERSION = "0.1.0-alpha"
-    AUTHOR  = "Tai D. Nguyen"
+    AUTHOR = "Tai D. Nguyen"
 
     def __init__(
         self,
@@ -75,10 +75,10 @@ class QuantumGateway:
         if n_qubits < 1:
             raise ValueError("n_qubits must be >= 1")
 
-        self.n_qubits    = n_qubits
-        self.encoding    = encoding
+        self.n_qubits = n_qubits
+        self.encoding = encoding
         self.noise_model = noise_model
-        self.backend     = backend
+        self.backend = backend
 
         # Build encoder
         if encoding == "amplitude":
@@ -86,7 +86,9 @@ class QuantumGateway:
         elif encoding == "angle":
             self._encoder = AngleEncoder(n_qubits)
         else:
-            raise ValueError(f"Unknown encoding: '{encoding}'. Choose 'amplitude' or 'angle'.")
+            raise ValueError(
+                f"Unknown encoding: '{encoding}'. Choose 'amplitude' or 'angle'."
+            )
 
         # Build evolution layer
         self._evolution = ParameterizedEvolution(n_qubits)
@@ -226,27 +228,27 @@ class QuantumGateway:
         float
             Loss value.
         """
-        result   = self.transform(data, theta=theta, shots=4096)
-        probs    = np.array(list(result["probabilities"].values()))
+        result = self.transform(data, theta=theta, shots=4096)
+        probs = np.array(list(result["probabilities"].values()))
         target_p = np.asarray(target, dtype=float)
         target_p = target_p / target_p.sum()
 
         # KL divergence: D_KL(output || target)
         eps = 1e-12
-        kl  = np.sum(probs * np.log((probs + eps) / (target_p[:len(probs)] + eps)))
+        kl = np.sum(probs * np.log((probs + eps) / (target_p[: len(probs)] + eps)))
         return float(kl)
 
     def info(self) -> Dict[str, Any]:
         """Return system metadata."""
         return {
-            "name":       "Quantum Gateway",
-            "version":    self.VERSION,
-            "author":     self.AUTHOR,
-            "copyright":  "© 2026 Tai D. Nguyen. All rights reserved.",
-            "n_qubits":   self.n_qubits,
-            "encoding":   self.encoding,
-            "backend":    self.backend,
-            "noise":      self.noise_model is not None,
+            "name": "Quantum Gateway",
+            "version": self.VERSION,
+            "author": self.AUTHOR,
+            "copyright": "© 2026 Tai D. Nguyen. All rights reserved.",
+            "n_qubits": self.n_qubits,
+            "encoding": self.encoding,
+            "backend": self.backend,
+            "noise": self.noise_model is not None,
         }
 
     def __repr__(self) -> str:

@@ -48,17 +48,13 @@ def mixed_state_entropy(rho):
     if len(eigenvalues) == 0:
         return 0.0
 
-    return float(
-        -np.sum(eigenvalues * np.log2(eigenvalues))
-    )
+    return float(-np.sum(eigenvalues * np.log2(eigenvalues)))
 
 
 def purity(rho):
     rho = np.asarray(rho, dtype=complex)
 
-    return float(
-        np.real(np.trace(rho @ rho))
-    )
+    return float(np.real(np.trace(rho @ rho)))
 
 
 def fidelity_pure_state(state, rho):
@@ -74,10 +70,7 @@ def fidelity_pure_state(state, rho):
 def noise_metrics(state, p):
     psi = normalize_state(state)
 
-    rho = np.outer(
-        psi,
-        np.conjugate(psi)
-    )
+    rho = np.outer(psi, np.conjugate(psi))
 
     noisy = depolarizing_mixture(rho, p)
 

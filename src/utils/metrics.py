@@ -21,8 +21,9 @@ from typing import Union
 from qiskit.quantum_info import Statevector, state_fidelity
 
 
-def fidelity(state1: Union[np.ndarray, Statevector],
-             state2: Union[np.ndarray, Statevector]) -> float:
+def fidelity(
+    state1: Union[np.ndarray, Statevector], state2: Union[np.ndarray, Statevector]
+) -> float:
     """
     Quantum state fidelity: F(ρ, σ) = |⟨ψ|φ⟩|²
 

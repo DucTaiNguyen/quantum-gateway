@@ -2,20 +2,11 @@ import numpy as np
 
 I = np.eye(2, dtype=complex)
 
-X = np.array([
-    [0, 1],
-    [1, 0]
-], dtype=complex)
+X = np.array([[0, 1], [1, 0]], dtype=complex)
 
-Y = np.array([
-    [0, -1j],
-    [1j, 0]
-], dtype=complex)
+Y = np.array([[0, -1j], [1j, 0]], dtype=complex)
 
-Z = np.array([
-    [1, 0],
-    [0, -1]
-], dtype=complex)
+Z = np.array([[1, 0], [0, -1]], dtype=complex)
 
 
 def kron(a, b):
@@ -26,19 +17,13 @@ def ry(theta):
     c = np.cos(theta / 2)
     s = np.sin(theta / 2)
 
-    return np.array([
-        [c, -s],
-        [s,  c]
-    ], dtype=complex)
+    return np.array([[c, -s], [s, c]], dtype=complex)
 
 
 def cnot():
-    return np.array([
-        [1, 0, 0, 0],
-        [0, 1, 0, 0],
-        [0, 0, 0, 1],
-        [0, 0, 1, 0]
-    ], dtype=complex)
+    return np.array(
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]], dtype=complex
+    )
 
 
 def normalize_state(state):
@@ -81,11 +66,7 @@ def reduced_density_matrix_A(state):
 
     rho4 = rho.reshape(2, 2, 2, 2)
 
-    return np.trace(
-        rho4,
-        axis1=1,
-        axis2=3
-    )
+    return np.trace(rho4, axis1=1, axis2=3)
 
 
 def von_neumann_entropy(rho):
@@ -101,9 +82,7 @@ def von_neumann_entropy(rho):
     if len(nonzero) == 0:
         return 0.0
 
-    return float(
-        -np.sum(nonzero * np.log2(nonzero))
-    )
+    return float(-np.sum(nonzero * np.log2(nonzero)))
 
 
 def entanglement_entropy(state):

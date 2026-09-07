@@ -24,7 +24,7 @@ from qiskit.quantum_info import Statevector
 
 def _von_neumann_entropy(probs: np.ndarray) -> float:
     """Shannon entropy of probability distribution (bits)."""
-    probs  = probs[probs > 1e-12]
+    probs = probs[probs > 1e-12]
     return float(-np.sum(probs * np.log2(probs)))
 
 
@@ -50,7 +50,7 @@ class StatevectorMeasurer:
     def measure(
         self,
         circuit: QuantumCircuit,
-        shots: int = 1024,         # ignored; kept for API compatibility
+        shots: int = 1024,  # ignored; kept for API compatibility
         observable: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
@@ -77,15 +77,15 @@ class StatevectorMeasurer:
             }
         """
         # Simulate exact statevector
-        sv       = Statevector.from_instruction(circuit)
+        sv = Statevector.from_instruction(circuit)
         sv_array = sv.data
-        n        = circuit.num_qubits
+        n = circuit.num_qubits
 
         # Born rule probabilities
         probs_array = np.abs(sv_array) ** 2
 
         # Build bitstring → probability mapping
-        bitstrings   = [format(i, f"0{n}b") for i in range(2 ** n)]
+        bitstrings = [format(i, f"0{n}b") for i in range(2**n)]
         probabilities = {bs: float(p) for bs, p in zip(bitstrings, probs_array)}
 
         # Pseudo-counts (for API compatibility with ProbabilisticMeasurer)
@@ -99,17 +99,18 @@ class StatevectorMeasurer:
         if observable is not None:
             try:
                 from qiskit.quantum_info import SparsePauliOp
-                op          = SparsePauliOp(observable)
+
+                op = SparsePauliOp(observable)
                 expectation = float(sv.expectation_value(op).real)
             except Exception as e:
                 expectation = None
 
         return {
-            "counts":       counts,
+            "counts": counts,
             "probabilities": probabilities,
-            "entropy":      entropy,
-            "statevector":  sv_array,
-            "expectation":  expectation,
+            "entropy": entropy,
+            "statevector": sv_array,
+            "expectation": expectation,
         }
 
     def __repr__(self) -> str:

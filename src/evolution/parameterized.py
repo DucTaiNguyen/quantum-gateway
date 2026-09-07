@@ -44,7 +44,7 @@ class ParameterizedEvolution:
 
     def __init__(self, n_qubits: int, layers: int = 1):
         self.n_qubits = n_qubits
-        self.layers   = layers
+        self.layers = layers
         self.n_params = layers * self.PARAMS_PER_LAYER * max(1, n_qubits // 2)
 
     def apply(
@@ -72,9 +72,9 @@ class ParameterizedEvolution:
 
         # Pad or truncate theta to expected length
         if len(theta) < self.n_params:
-            pad   = np.full(self.n_params - len(theta), np.pi / 4)
+            pad = np.full(self.n_params - len(theta), np.pi / 4)
             theta = np.concatenate([theta, pad])
-        theta = theta[:self.n_params]
+        theta = theta[: self.n_params]
 
         evolved = circuit.copy()
         evolved.barrier(label="U(θ) start")
@@ -106,9 +106,9 @@ class ParameterizedEvolution:
         # Multi-qubit ansatz
         for pair_start in range(0, n - 1, 2):
             q0, q1 = pair_start, pair_start + 1
-            t0     = theta[idx]     if idx     < len(theta) else np.pi / 4
-            t1     = theta[idx + 1] if idx + 1 < len(theta) else np.pi / 4
-            t2     = theta[idx + 2] if idx + 2 < len(theta) else np.pi / 4
+            t0 = theta[idx] if idx < len(theta) else np.pi / 4
+            t1 = theta[idx + 1] if idx + 1 < len(theta) else np.pi / 4
+            t2 = theta[idx + 2] if idx + 2 < len(theta) else np.pi / 4
 
             qc.h(q0)
             qc.ry(t0, q1)

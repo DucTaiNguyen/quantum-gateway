@@ -11,3 +11,7 @@ dependencies = ["numpy"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.black]
+target-version = ["py313"]
+line-length = 88
