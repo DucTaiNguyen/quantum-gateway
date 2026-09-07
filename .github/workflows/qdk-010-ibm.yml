@@ -1,0 +1,221 @@
+name: QDK-010 IBM Quantum Hardware Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      shots:
+        description: "Number of measurement shots"
+        required: true
+        default: "1024"
+      optimization_level:
+        description: "Qiskit transpiler optimization level"
+        required: true
+        default: "1"
+
+permissions:
+  contents: read
+
+jobs:
+  qdk-010-ibm:
+    name: IBM Quantum Hardware Smoke Test
+    runs-on: ubuntu-latest
+
+    env:
+      IBM_QUANTUM_TOKEN: ${{ secrets.IBM_QUANTUM_TOKEN }}
+      IBM_QUANTUM_INSTANCE: ${{ secrets.IBM_QUANTUM_INSTANCE }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Qiskit
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "qiskit>=2.2,<3"
+          python -m pip install "qiskit-ibm-runtime>=0.47,<1"
+
+      - name: Verify installation
+        run: |
+          python - <<'PY'
+          import qiskit
+          import qiskit_ibm_runtime
+
+          print("Qiskit:", qiskit.__version__)
+          print("Qiskit IBM Runtime:", qiskit_ibm_runtime.__version__)
+          PY
+
+      - name: Verify IBM credentials
+        env:
+          IBM_QUANTUM_TOKEN: ${{ secrets.IBM_QUANTUM_TOKEN }}
+          IBM_QUANTUM_INSTANCE: ${{ secrets.IBM_QUANTUM_INSTANCE }}
+        run: |
+          python - <<'PY'
+          import os
+          from qiskit_ibm_runtime import QiskitRuntimeService
+
+          token = os.environ.get("IBM_QUANTUM_TOKEN")
+          instance = os.environ.get("IBM_QUANTUM_INSTANCE")
+
+          if not token:
+              raise RuntimeError(
+                  "IBM_QUANTUM_TOKEN GitHub Secret is not configured."
+              )
+
+          kwargs = {
+              "channel": "ibm_quantum_platform",
+              "token": token,
+          }
+
+          if instance:
+              kwargs["instance"] = instance
+
+          service = QiskitRuntimeService(**kwargs)
+
+          print("IBM Quantum authentication: OK")
+          print("Active instance:", service.active_instance())
+          PY
+
+      - name: Run QDK-010 hardware smoke test
+        env:
+          IBM_QUANTUM_TOKEN: ${{ secrets.IBM_QUANTUM_TOKEN }}
+          IBM_QUANTUM_INSTANCE: ${{ secrets.IBM_QUANTUM_INSTANCE }}
+          QDK_SHOTS: ${{ inputs.shots }}
+          QDK_OPTIMIZATION_LEVEL: ${{ inputs.optimization_level }}
+        run: |
+          mkdir -p results/qdk_010
+
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          from qiskit import QuantumCircuit
+          from qiskit.transpiler import generate_preset_pass_manager
+          from qiskit_ibm_runtime import (
+              QiskitRuntimeService,
+              SamplerV2,
+          )
+
+          token = os.environ["IBM_QUANTUM_TOKEN"]
+          instance = os.environ.get("IBM_QUANTUM_INSTANCE")
+          shots = int(os.environ.get("QDK_SHOTS", "1024"))
+          optimization_level = int(
+              os.environ.get("QDK_OPTIMIZATION_LEVEL", "1")
+          )
+
+          kwargs = {
+              "channel": "ibm_quantum_platform",
+              "token": token,
+          }
+
+          if instance:
+              kwargs["instance"] = instance
+
+          service = QiskitRuntimeService(**kwargs)
+
+          backend = service.least_busy(
+              operational=True,
+              simulator=False,
+              min_num_qubits=2,
+          )
+
+          print("Selected backend:", backend.name)
+
+          qc = QuantumCircuit(2)
+
+          qc.h(0)
+          qc.cx(0, 1)
+
+          qc.measure_all()
+
+          print("\nOriginal circuit:")
+          print(qc)
+
+          pass_manager = generate_preset_pass_manager(
+              backend=backend,
+              optimization_level=optimization_level,
+          )
+
+          isa_circuit = pass_manager.run(qc)
+
+          print("\nISA circuit:")
+          print(isa_circuit)
+
+          sampler = SamplerV2(mode=backend)
+
+          job = sampler.run(
+              [isa_circuit],
+              shots=shots,
+          )
+
+          print("\nIBM Quantum Job ID:", job.job_id())
+
+          result = job.result()
+
+          print("\nRaw Runtime result:")
+          print(result)
+
+          pub_result = result[0]
+
+          counts = None
+
+          if hasattr(pub_result, "data"):
+              data = pub_result.data
+
+              if hasattr(data, "meas"):
+                  counts = data.meas.get_counts()
+
+          if counts is None:
+              raise RuntimeError(
+                  "Could not extract measurement counts from SamplerV2 result."
+              )
+
+          print("\nMeasurement counts:")
+          print(counts)
+
+          output = {
+              "experiment": "QDK-010",
+              "experiment_type": "hardware_smoke_test",
+              "backend": backend.name,
+              "job_id": job.job_id(),
+              "shots": shots,
+              "optimization_level": optimization_level,
+              "timestamp_utc": datetime.now(
+                  timezone.utc
+              ).isoformat(),
+              "circuit": {
+                  "type": "2-qubit Bell-state sanity check",
+                  "operations": [
+                      "H(q0)",
+                      "CX(q0,q1)",
+                      "measure_all",
+                  ],
+              },
+              "measurement_counts": counts,
+          }
+
+          output_path = "results/qdk_010/QDK-010-SMOKE-TEST.json"
+
+          with open(output_path, "w", encoding="utf-8") as f:
+              json.dump(
+                  output,
+                  f,
+                  indent=2,
+                  sort_keys=True,
+              )
+
+          print(f"\nSaved: {output_path}")
+          PY
+
+      - name: Upload QDK-010 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: qdk-010-ibm-results
+          path: results/qdk_010/
+          if-no-files-found: error
