@@ -1,0 +1,66 @@
+{
+  "experiment": "QDK-020",
+  "title": "Physical Realizability of Global Symmetry",
+  "target_permutation": [
+    1,
+    0,
+    3,
+    2
+  ],
+  "matrix_dimension": 4,
+  "unitarity_error": 0.0,
+  "operator_schmidt_rank": 1,
+  "operator_schmidt_singular_values": [
+    2.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "local_product_candidate": true,
+  "product_reconstruction_error": 5.438959822042073e-16,
+  "physical_local_unitary": true,
+  "factor_A": [
+    [
+      {
+        "real": 1.0000000000000002,
+        "imag": 0.0
+      },
+      {
+        "real": 0.0,
+        "imag": 0.0
+      }
+    ],
+    [
+      {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      {
+        "real": 1.0,
+        "imag": 0.0
+      }
+    ]
+  ],
+  "factor_B": [
+    [
+      {
+        "real": -0.0,
+        "imag": 0.0
+      },
+      {
+        "real": 1.0,
+        "imag": 0.0
+      }
+    ],
+    [
+      {
+        "real": 1.0000000000000002,
+        "imag": 0.0
+      },
+      {
+        "real": -0.0,
+        "imag": 0.0
+      }
+    ]
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "experiment": "QDK-014",
+  "title": "Exhaustive Encoding Robustness Test",
+  "n_structures": 3,
+  "n_encodings": 24,
+  "n_encoding_pairs_per_structure": 276,
+  "channels": [
+    "amplitude_damping",
+    "phase_damping"
+  ],
+  "within_structure": {
+    "amplitude_damping": {
+      "STRUCTURED": {
+        "min": 0.0,
+        "median": 1.0154886995796828,
+        "mean": 0.6296696031386905,
+        "max": 2.0450153821554773,
+        "n_pairs": 276
+      },
+      "WEAK": {
+        "min": 0.0,
+        "median": 1.152009359644349,
+        "mean": 0.8889391018531935,
+        "max": 2.427334747845996,
+        "n_pairs": 276
+      },
+      "ASYMMETRIC": {
+        "min": 0.0,
+        "median": 2.0170727909904698,
+        "mean": 1.2483297896384287,
+        "max": 2.2849265053734795,
+        "n_pairs": 276
+      }
+    },
+    "phase_damping": {
+      "STRUCTURED": {
+        "min": 0.0,
+        "median": 1.418377278514291,
+        "mean": 0.8217649479919142,
+        "max": 2.82842712474619,
+        "n_pairs": 276
+      },
+      "WEAK": {
+        "min": 0.0,
+        "median": 1.472584028563153,
+        "mean": 0.8469043103334156,
+        "max": 2.8284271247461903,
+        "n_pairs": 276
+      },
+      "ASYMMETRIC": {
+        "min": 0.0,
+        "median": 2.82842712474619,
+        "mean": 1.5279574878393443,
+        "max": 2.83674224839683,
+        "n_pairs": 276
+      }
+    }
+  },
+  "between_structure": {
+    "amplitude_damping": {
+      "STRUCTURED_vs_WEAK": {
+        "min": 0.17958659212200256,
+        "median": 0.3580621713594794,
+        "mean": 0.3608423077274086,
+        "max": 0.6137547383936423,
+        "n_encodings": 24
+      },
+      "STRUCTURED_vs_ASYMMETRIC": {
+        "min": 0.26348233797597703,
+        "median": 1.0117042283142572,
+        "mean": 0.7962680604347413,
+        "max": 1.0825059216188515,
+        "n_encodings": 24
+      },
+      "WEAK_vs_ASYMMETRIC": {
+        "min": 0.17887127992875243,
+        "median": 1.0118969567200828,
+        "mean": 0.7658119974063569,
+        "max": 1.076557147974659,
+        "n_encodings": 24
+      }
+    },
+    "phase_damping": {
+      "STRUCTURED_vs_WEAK": {
+        "min": 0.2446420448373159,
+        "median": 0.24464204483731591,
+        "mean": 0.3129982598540659,
+        "max": 0.44971068988756596,
+        "n_encodings": 24
+      },
+      "STRUCTURED_vs_ASYMMETRIC": {
+        "min": 0.2519789713992759,
+        "median": 1.4229374728505473,
+        "mean": 1.03261797236679,
+        "max": 1.4229374728505473,
+        "n_encodings": 24
+      },
+      "WEAK_vs_ASYMMETRIC": {
+        "min": 0.20237863550527477,
+        "median": 1.4199799571719336,
+        "mean": 1.014112849949714,
+        "max": 1.4199799571719336,
+        "n_encodings": 24
+      }
+    }
+  },
+  "robustness": {
+    "amplitude_damping": {
+      "min_between": 0.17887127992875243,
+      "max_within": 2.427334747845996,
+      "robustness_ratio": 0.07369040470725427
+    },
+    "phase_damping": {
+      "min_between": 0.20237863550527477,
+      "max_within": 2.83674224839683,
+      "robustness_ratio": 0.07134191892818179
+    }
+  },
+  "interpretation": "Descriptive robustness analysis. A high robustness ratio indicates that between-structure separation exceeds within-structure encoding variation under the tested reference model.",
+  "warning": "Numerical reference experiment only; not a physical theorem or statistical significance test."
+}

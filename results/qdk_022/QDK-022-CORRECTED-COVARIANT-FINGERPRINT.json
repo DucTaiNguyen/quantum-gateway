@@ -1,0 +1,74 @@
+{
+  "experiment": "QDK-022",
+  "title": "Corrected Symmetry-Covariant Structural Fingerprint",
+  "symmetry": {
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "operator": "I tensor X",
+    "physical_local_unitary": true
+  },
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "p_points": 21,
+  "channels": {
+    "phase_damping": {
+      "structures": {
+        "STRUCTURED": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        },
+        "WEAK": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        },
+        "ASYMMETRIC": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        }
+      },
+      "between_structure_distances": {
+        "STRUCTURED_vs_WEAK": 2.3596320622553633e-15,
+        "STRUCTURED_vs_ASYMMETRIC": 6.4807406984078595,
+        "WEAK_vs_ASYMMETRIC": 6.4807406984078595
+      },
+      "max_covariance_error": 0.0,
+      "covariance_pass": true
+    },
+    "amplitude_damping": {
+      "structures": {
+        "STRUCTURED": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        },
+        "WEAK": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        },
+        "ASYMMETRIC": {
+          "raw_covariance_error": 0.0,
+          "normalized_covariance_error": 0.0
+        }
+      },
+      "between_structure_distances": {
+        "STRUCTURED_vs_WEAK": 1.0337743943162178e-15,
+        "STRUCTURED_vs_ASYMMETRIC": 4.679675806854787,
+        "WEAK_vs_ASYMMETRIC": 4.679675806854787
+      },
+      "max_covariance_error": 0.0,
+      "covariance_pass": true
+    }
+  },
+  "summary": {
+    "phase_damping_pass": true,
+    "amplitude_damping_pass": true
+  }
+}

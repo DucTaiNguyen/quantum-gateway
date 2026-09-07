@@ -1,0 +1,57 @@
+{
+  "bootstrap": {
+    "lower_95": 28.13509025174116,
+    "mean": 42.17588744066415,
+    "median": 37.05696100781883,
+    "n_bootstrap": 5000,
+    "upper_95": 137.42986141372216
+  },
+  "classification_diagnostic": {
+    "method": "nearest-reference diagnostic",
+    "predictions": [
+      {
+        "distance": 1.0432351928726218,
+        "predicted_reference_neighbor": "ASYMMETRIC",
+        "true": "STRUCTURED"
+      },
+      {
+        "distance": 0.792064851164422,
+        "predicted_reference_neighbor": "ASYMMETRIC",
+        "true": "WEAK"
+      },
+      {
+        "distance": 0.792064851164422,
+        "predicted_reference_neighbor": "WEAK",
+        "true": "ASYMMETRIC"
+      }
+    ],
+    "warning": "Not an independent classifier accuracy estimate. QDK-009 summary contains structure-level distances rather than independent trajectory samples."
+  },
+  "descriptive_statistics": {
+    "maximum_within_mean_variation": 0.028152205806960384,
+    "minimum_between_distance": 0.792064851164422,
+    "pairwise_distances": {
+      "STRUCTURED_vs_ASYMMETRIC": 1.0432351928726218,
+      "STRUCTURED_vs_WEAK": 1.835294436627773,
+      "WEAK_vs_ASYMMETRIC": 0.792064851164422
+    },
+    "separation_ratio": 28.13509025174116,
+    "within_structure_means": {
+      "ASYMMETRIC": 0.01602915691368594,
+      "STRUCTURED": 0.028152205806960384,
+      "WEAK": 0.005763411554203427
+    }
+  },
+  "experiment": "QDK-011",
+  "permutation_test": {
+    "n_permutations": 10000,
+    "observed_contrast": 1.0432295854633509,
+    "observed_mean_distance": 1.2235314935549388,
+    "p_value": 1.0,
+    "test": "pairwise-distance permutation diagnostic",
+    "warning": "This permutation diagnostic is limited because QDK-009 summary data contain only three pairwise distances. A valid replicate-level permutation test requires the individual trajectory observations."
+  },
+  "scientific_status": "computational statistical diagnostic; not physical hardware validation",
+  "seed": 20260907,
+  "source": "QDK-009"
+}
