@@ -1,0 +1,38 @@
+{
+  "experiment": "JNKA-EXP001",
+  "purpose": "operational noise fingerprint characterization",
+  "backend": "numpy_synthetic",
+  "n_qubits": 4,
+  "shots": 4096,
+  "n_thetas": 33,
+  "n_seeds": 10,
+  "n_conditions": 3,
+  "total_observations": 990,
+  "warning": "Synthetic noise is used for local validation only; results are not hardware evidence.",
+  "summary": {
+    "low": {
+      "n": 330,
+      "mean_kl": 0.2908839434673668,
+      "mean_js": 0.005147623910983818,
+      "mean_tv": 0.01871472897922254,
+      "mean_entropy": 1.6624275681857563,
+      "mean_l1": 0.03742945795844508
+    },
+    "medium": {
+      "n": 330,
+      "mean_kl": 1.266813875299875,
+      "mean_js": 0.021274891200645987,
+      "mean_tv": 0.06265955880927065,
+      "mean_entropy": 1.986501126551761,
+      "mean_l1": 0.1253191176185413
+    },
+    "high": {
+      "n": 330,
+      "mean_kl": 3.379666272445397,
+      "mean_js": 0.0566301252838887,
+      "mean_tv": 0.15808299333948111,
+      "mean_entropy": 2.4944813091478335,
+      "mean_l1": 0.31616598667896223
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "experiment": "JNKA-EXP002",
+  "purpose": "test predictive contribution of noise fingerprint",
+  "n_samples": 1020,
+  "shots": 4096,
+  "base_features": [
+    "theta",
+    "sin(theta)",
+    "cos(theta)"
+  ],
+  "noise_features": [
+    "KL",
+    "JS",
+    "TV",
+    "entropy",
+    "L1"
+  ],
+  "baseline_r2": 0.8181405306664905,
+  "baseline_r2_std": 0.013807865125413477,
+  "augmented_r2": 0.963505592503418,
+  "augmented_r2_std": 0.0035270584005056642,
+  "delta_r2": 0.14536506183692754,
+  "interpretation": "Delta R2 measures incremental predictive association under this experimental design; it does not establish causality or fundamental physical information."
+}
