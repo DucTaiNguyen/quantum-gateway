@@ -6,8 +6,4 @@ def compute_utility(
     beta=1.0,
     gamma=1.0,
 ):
-    return (
-        alpha * learning_gain
-        + beta * representation_gain
-        - gamma * cost
-    )
+    return alpha * learning_gain + beta * representation_gain - gamma * cost

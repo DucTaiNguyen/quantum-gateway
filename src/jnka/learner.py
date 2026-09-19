@@ -5,6 +5,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 
+
 def evaluate_regression(X, y, seed=42):
     model = make_pipeline(
         StandardScaler(),
@@ -30,8 +31,6 @@ def evaluate_regression(X, y, seed=42):
         "std_r2": float(np.std(scores)),
     }
 
+
 def learning_gain(baseline_score, noise_score):
-    return (
-        noise_score["mean_r2"]
-        - baseline_score["mean_r2"]
-    )
+    return noise_score["mean_r2"] - baseline_score["mean_r2"]

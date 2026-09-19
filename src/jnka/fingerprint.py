@@ -9,6 +9,7 @@ from .distributions import (
     l1_distance,
 )
 
+
 @dataclass
 class NoiseFingerprint:
     kl: float
@@ -18,16 +19,20 @@ class NoiseFingerprint:
     l1: float
 
     def vector(self):
-        return np.array([
-            self.kl,
-            self.js,
-            self.tv,
-            self.entropy,
-            self.l1,
-        ], dtype=float)
+        return np.array(
+            [
+                self.kl,
+                self.js,
+                self.tv,
+                self.entropy,
+                self.l1,
+            ],
+            dtype=float,
+        )
 
     def to_dict(self):
         return asdict(self)
+
 
 def compute_fingerprint(ideal_distribution, observed_distribution):
     return NoiseFingerprint(

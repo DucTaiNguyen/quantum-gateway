@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import Dict, List
 import numpy as np
 
+
 @dataclass
 class NoiseRecord:
     experiment_id: str
@@ -10,6 +11,7 @@ class NoiseRecord:
     utility: float
     action: str
     metadata: Dict
+
 
 class NoiseMemory:
     def __init__(self):

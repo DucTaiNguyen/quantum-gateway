@@ -1,10 +1,12 @@
 from enum import Enum
 
+
 class NoiseAction(str, Enum):
     LEARN = "LEARN"
     INVESTIGATE = "INVESTIGATE"
     MITIGATE = "MITIGATE"
     IGNORE = "IGNORE"
+
 
 def decide(
     utility,
