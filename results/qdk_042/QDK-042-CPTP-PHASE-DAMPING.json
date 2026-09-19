@@ -1,0 +1,85 @@
+{
+  "experiment": "QDK-042",
+  "title": "CPTP Phase-Damping Validation",
+  "state_space_dimension": 15,
+  "noise_points": 21,
+  "observables": [
+    "IX",
+    "IY",
+    "IZ",
+    "XI",
+    "XX",
+    "XY",
+    "XZ",
+    "YI",
+    "YX",
+    "YY",
+    "YZ",
+    "ZI",
+    "ZX",
+    "ZY",
+    "ZZ"
+  ],
+  "kraus_completeness_error": 3.1401849173675503e-16,
+  "channels": {
+    "phase_damping_cptp": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "nullity": 0,
+      "injective": true,
+      "minimum_singular_value": 8.500976414506747,
+      "maximum_singular_value": 18.330302779823363,
+      "condition_number": 2.1562585150269404,
+      "physical_validation": {
+        "max_trace_error": 5.551115123125783e-16,
+        "minimum_eigenvalue": 0.00023652961774706343,
+        "trace_preserving": true,
+        "positive": true
+      }
+    },
+    "nonlinear_phase_cptp": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "nullity": 0,
+      "injective": true,
+      "minimum_singular_value": 11.748691274616505,
+      "maximum_singular_value": 18.330302779823363,
+      "condition_number": 1.5601995448996673,
+      "physical_validation": {
+        "max_trace_error": 5.551115123125783e-16,
+        "minimum_eigenvalue": 0.00023652961774706343,
+        "trace_preserving": true,
+        "positive": true
+      }
+    }
+  },
+  "restricted_11": {
+    "observables": [
+      "IX",
+      "IY",
+      "IZ",
+      "XI",
+      "XX",
+      "XY",
+      "XZ",
+      "YI",
+      "YX",
+      "YY",
+      "YZ"
+    ],
+    "matrix_shape": [
+      231,
+      15
+    ],
+    "rank": 11,
+    "nullity": 4,
+    "minimum_singular_value": 0.0,
+    "injective": false
+  }
+}

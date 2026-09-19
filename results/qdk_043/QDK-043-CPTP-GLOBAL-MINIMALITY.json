@@ -1,0 +1,65 @@
+{
+  "experiment": "QDK-043",
+  "title": "Global Minimality of CPTP Quantum Noise Fingerprints",
+  "state_space_dimension": 15,
+  "observable_count": 15,
+  "noise_points": 21,
+  "channels": {
+    "phase_damping_cptp": {
+      "full_matrix_shape": [
+        315,
+        15
+      ],
+      "full_rank": 15,
+      "global_minimum_k": 15,
+      "minimal_subsets": [
+        [
+          "IX",
+          "IY",
+          "IZ",
+          "XI",
+          "XX",
+          "XY",
+          "XZ",
+          "YI",
+          "YX",
+          "YY",
+          "YZ",
+          "ZI",
+          "ZX",
+          "ZY",
+          "ZZ"
+        ]
+      ],
+      "subsets_tested": 32767
+    },
+    "nonlinear_phase_cptp": {
+      "full_matrix_shape": [
+        315,
+        15
+      ],
+      "full_rank": 15,
+      "global_minimum_k": 15,
+      "minimal_subsets": [
+        [
+          "IX",
+          "IY",
+          "IZ",
+          "XI",
+          "XX",
+          "XY",
+          "XZ",
+          "YI",
+          "YX",
+          "YY",
+          "YZ",
+          "ZI",
+          "ZX",
+          "ZY",
+          "ZZ"
+        ]
+      ],
+      "subsets_tested": 32767
+    }
+  }
+}
