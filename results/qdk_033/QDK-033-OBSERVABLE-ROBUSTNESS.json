@@ -1,0 +1,124 @@
+{
+  "experiment": "QDK-033",
+  "title": "Observable Basis Robustness",
+  "seed": 20260907,
+  "pairs": 20,
+  "observable_sets": [
+    "CORRELATION",
+    "LOCAL",
+    "MIXED",
+    "FULL"
+  ],
+  "channels": [
+    "depolarizing",
+    "phase_damping",
+    "amplitude_damping"
+  ],
+  "results": {
+    "CORRELATION": {
+      "depolarizing": {
+        "mean_alpha": 1.0,
+        "std_alpha": 2.105622189846737e-15,
+        "min_alpha": 0.9999999999999954,
+        "max_alpha": 1.0000000000000044,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "phase_damping": {
+        "mean_alpha": 1.0000000000000007,
+        "std_alpha": 4.269237015685425e-15,
+        "min_alpha": 0.9999999999999923,
+        "max_alpha": 1.0000000000000084,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "amplitude_damping": {
+        "mean_alpha": 1.051101309008153,
+        "std_alpha": 0.042715580963660724,
+        "min_alpha": 1.0039931941624203,
+        "max_alpha": 1.1131343832373195,
+        "mean_R2": 0.9961776139942158,
+        "min_R2": 0.9900830187862145
+      }
+    },
+    "LOCAL": {
+      "depolarizing": {
+        "mean_alpha": 1.0000000000000009,
+        "std_alpha": 1.5527253915556727e-15,
+        "min_alpha": 0.9999999999999984,
+        "max_alpha": 1.0000000000000033,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "phase_damping": {
+        "mean_alpha": 1.0826874176415848,
+        "std_alpha": 0.032820423752237045,
+        "min_alpha": 1.0015823518152074,
+        "max_alpha": 1.1132327119928411,
+        "mean_R2": 0.9932553413871321,
+        "min_R2": 0.9900722852114985
+      },
+      "amplitude_damping": {
+        "mean_alpha": 1.0530369666689352,
+        "std_alpha": 0.04233234103055967,
+        "min_alpha": 1.003465629800986,
+        "max_alpha": 1.1124965851783752,
+        "mean_R2": 0.9960035464819932,
+        "min_R2": 0.9901526956534085
+      }
+    },
+    "MIXED": {
+      "depolarizing": {
+        "mean_alpha": 0.9999999999999994,
+        "std_alpha": 1.7086256602603003e-15,
+        "min_alpha": 0.9999999999999966,
+        "max_alpha": 1.0000000000000033,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "phase_damping": {
+        "mean_alpha": 1.0000000000000009,
+        "std_alpha": 4.156150699145947e-15,
+        "min_alpha": 0.9999999999999875,
+        "max_alpha": 1.000000000000008,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "amplitude_damping": {
+        "mean_alpha": 1.0473783649836172,
+        "std_alpha": 0.03137594874825625,
+        "min_alpha": 1.0007886619776372,
+        "max_alpha": 1.1052030481424344,
+        "mean_R2": 0.9967555718434014,
+        "min_R2": 0.9909555877597459
+      }
+    },
+    "FULL": {
+      "depolarizing": {
+        "mean_alpha": 1.0,
+        "std_alpha": 7.897424600402099e-16,
+        "min_alpha": 0.9999999999999987,
+        "max_alpha": 1.0000000000000016,
+        "mean_R2": 1.0,
+        "min_R2": 1.0
+      },
+      "phase_damping": {
+        "mean_alpha": 1.0534394288400377,
+        "std_alpha": 0.017618843845091978,
+        "min_alpha": 1.0239719176484645,
+        "max_alpha": 1.086232628450046,
+        "mean_R2": 0.9965089467559908,
+        "min_R2": 0.9930749183032781
+      },
+      "amplitude_damping": {
+        "mean_alpha": 1.0443104395923122,
+        "std_alpha": 0.02220550167940034,
+        "min_alpha": 1.0131800980991146,
+        "max_alpha": 1.0944312567162704,
+        "mean_R2": 0.9972908393648423,
+        "min_R2": 0.9921563097595035
+      }
+    }
+  },
+  "interpretation": "Tests whether empirical noise-response scaling persists under different observable bases. Agreement supports robustness of the measured phenomenon but does not establish a universal law."
+}

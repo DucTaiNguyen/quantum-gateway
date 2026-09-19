@@ -1,0 +1,44 @@
+{
+  "experiment": "QDK-035",
+  "title": "Structure-Response Invariance Under Noise Parameterization",
+  "seed": 20260907,
+  "trials": 100,
+  "fixed_spectrum": [
+    0.5,
+    0.25,
+    0.15,
+    0.1
+  ],
+  "noise_points": 20,
+  "results": {
+    "depolarizing": {
+      "minimum": 0.2419207912863517,
+      "median": 1.3223991238940318,
+      "mean": 1.3192309528338784,
+      "maximum": 2.3214715651119278,
+      "nonzero_fraction": 1.0
+    },
+    "nonlinear_depolarizing": {
+      "minimum": 0.30334915674709106,
+      "median": 1.658181824651538,
+      "mean": 1.6542091937155283,
+      "maximum": 2.910938071690997,
+      "nonzero_fraction": 1.0
+    },
+    "phase_damping": {
+      "minimum": 0.31404248016527947,
+      "median": 1.8205508545127118,
+      "mean": 1.838060436373759,
+      "maximum": 3.7366413378808696,
+      "nonzero_fraction": 1.0
+    },
+    "nonlinear_phase": {
+      "minimum": 0.34774948375712905,
+      "median": 1.984375837600147,
+      "mean": 1.9809696321046328,
+      "maximum": 3.8018921429641037,
+      "nonzero_fraction": 1.0
+    }
+  },
+  "interpretation": "Tests whether distinct same-spectrum quantum states remain distinguishable by their complete noise-response fingerprints under different noise parameterizations."
+}

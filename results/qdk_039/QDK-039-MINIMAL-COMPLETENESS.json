@@ -1,0 +1,112 @@
+{
+  "experiment": "QDK-039",
+  "title": "Minimal Observable Set for Quantum Fingerprint Completeness",
+  "target_rank": 15,
+  "observable_basis": [
+    "IX",
+    "IY",
+    "IZ",
+    "XI",
+    "XX",
+    "XY",
+    "XZ",
+    "YI",
+    "YX",
+    "YY",
+    "YZ",
+    "ZI",
+    "ZX",
+    "ZY",
+    "ZZ"
+  ],
+  "noise_points": 21,
+  "results": {
+    "depolarizing": {
+      "selected_observables": [
+        "IX",
+        "IY",
+        "IZ",
+        "XI",
+        "XX",
+        "XY",
+        "XZ",
+        "YI",
+        "YX",
+        "YY",
+        "YZ",
+        "ZI",
+        "ZX",
+        "ZY",
+        "ZZ"
+      ],
+      "rank": 15,
+      "target_rank": 15,
+      "locally_minimal": true,
+      "removable_without_rank_loss": []
+    },
+    "nonlinear_depolarizing": {
+      "selected_observables": [
+        "IX",
+        "IY",
+        "IZ",
+        "XI",
+        "XX",
+        "XY",
+        "XZ",
+        "YI",
+        "YX",
+        "YY",
+        "YZ",
+        "ZI",
+        "ZX",
+        "ZY",
+        "ZZ"
+      ],
+      "rank": 15,
+      "target_rank": 15,
+      "locally_minimal": true,
+      "removable_without_rank_loss": []
+    },
+    "phase_damping": {
+      "selected_observables": [
+        "IZ",
+        "XX",
+        "XY",
+        "IX",
+        "IY",
+        "XI",
+        "XZ",
+        "YI",
+        "YZ",
+        "ZX",
+        "ZY",
+        "ZZ"
+      ],
+      "rank": 15,
+      "target_rank": 15,
+      "locally_minimal": true,
+      "removable_without_rank_loss": []
+    },
+    "nonlinear_phase": {
+      "selected_observables": [
+        "IZ",
+        "XX",
+        "XY",
+        "IX",
+        "IY",
+        "XI",
+        "XZ",
+        "YI",
+        "YZ",
+        "ZX",
+        "ZY",
+        "ZZ"
+      ],
+      "rank": 15,
+      "target_rank": 15,
+      "locally_minimal": true,
+      "removable_without_rank_loss": []
+    }
+  },
+  "scientific_note": "Greedy rank-increment search followed by single-removal minimality verification. Local minimality does not by itself prove global minimum cardinality."
+}

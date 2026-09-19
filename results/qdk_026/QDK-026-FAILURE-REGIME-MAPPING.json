@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "experiment": "QDK-026",
+    "title": "Failure-Regime Mapping",
+    "source": "results/qdk_025/QDK-025-BLIND-HOLDOUT.json",
+    "number_of_conditions": 24,
+    "chance_accuracy": 0.3333333333333333,
+    "number_above_chance": 22,
+    "number_below_chance": 2,
+    "failure_fraction": 0.08333333333333333
+  },
+  "failure_conditions": [
+    {
+      "condition": "phase_damping__CORRELATION__shots_1024",
+      "accuracy": 0.31666666666666665,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": false
+    },
+    {
+      "condition": "phase_damping__CORRELATION__shots_4096",
+      "accuracy": 0.32666666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": false
+    }
+  ],
+  "successful_conditions": [
+    {
+      "condition": "phase_damping__ALL__shots_1024",
+      "accuracy": 0.68,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__ALL__shots_4096",
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__ALL__shots_16384",
+      "accuracy": 0.6466666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__CORRELATION__shots_16384",
+      "accuracy": 0.34,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__LOCAL__shots_1024",
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__LOCAL__shots_4096",
+      "accuracy": 0.61,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__LOCAL__shots_16384",
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__MIXED__shots_1024",
+      "accuracy": 0.6866666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__MIXED__shots_4096",
+      "accuracy": 0.69,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "phase_damping__MIXED__shots_16384",
+      "accuracy": 0.6733333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__ALL__shots_1024",
+      "accuracy": 0.6666666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__ALL__shots_4096",
+      "accuracy": 0.6866666666666666,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__ALL__shots_16384",
+      "accuracy": 0.66,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__CORRELATION__shots_1024",
+      "accuracy": 0.7033333333333334,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__CORRELATION__shots_4096",
+      "accuracy": 0.64,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__CORRELATION__shots_16384",
+      "accuracy": 0.63,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__LOCAL__shots_1024",
+      "accuracy": 0.6966666666666667,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__LOCAL__shots_4096",
+      "accuracy": 0.6366666666666667,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__LOCAL__shots_16384",
+      "accuracy": 0.65,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__MIXED__shots_1024",
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__MIXED__shots_4096",
+      "accuracy": 0.6533333333333333,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    },
+    {
+      "condition": "amplitude_damping__MIXED__shots_16384",
+      "accuracy": 0.68,
+      "chance_accuracy": 0.3333333333333333,
+      "above_chance": true
+    }
+  ]
+}

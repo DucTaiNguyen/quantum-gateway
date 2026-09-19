@@ -1,0 +1,37 @@
+{
+  "experiment": "QDK-032",
+  "title": "Ensemble Scaling Stability",
+  "seed": 20260907,
+  "pairs": 30,
+  "noise_points": 20,
+  "summary": {
+    "depolarizing": {
+      "mean_alpha": 1.0,
+      "std_alpha": 2.1995308636845124e-15,
+      "min_alpha": 0.999999999999995,
+      "max_alpha": 1.000000000000004,
+      "mean_R2": 1.0,
+      "min_R2": 1.0,
+      "max_R2": 1.0
+    },
+    "phase_damping": {
+      "mean_alpha": 1.0000000000000009,
+      "std_alpha": 4.526162005221748e-15,
+      "min_alpha": 0.9999999999999913,
+      "max_alpha": 1.0000000000000162,
+      "mean_R2": 1.0,
+      "min_R2": 1.0,
+      "max_R2": 1.0
+    },
+    "amplitude_damping": {
+      "mean_alpha": 1.030391513823742,
+      "std_alpha": 0.03043347867762404,
+      "min_alpha": 1.0001932598230383,
+      "max_alpha": 1.1093927304655562,
+      "mean_R2": 0.9981636809532043,
+      "min_R2": 0.9904930735556682,
+      "max_R2": 0.9999999312275538
+    }
+  },
+  "interpretation": "This experiment tests whether the empirical scaling exponent is stable across independent same-spectrum state pairs. Stability across pairs is required before stronger universality claims can be considered."
+}

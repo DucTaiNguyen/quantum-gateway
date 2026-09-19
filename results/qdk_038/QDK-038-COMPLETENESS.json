@@ -1,0 +1,75 @@
+{
+  "experiment": "QDK-038",
+  "title": "Quantum Noise Fingerprint Completeness and Rank",
+  "observable_count": 15,
+  "observables": [
+    "IX",
+    "IY",
+    "IZ",
+    "XI",
+    "XX",
+    "XY",
+    "XZ",
+    "YI",
+    "YX",
+    "YY",
+    "YZ",
+    "ZI",
+    "ZX",
+    "ZY",
+    "ZZ"
+  ],
+  "noise_points": 21,
+  "maximum_possible_rank": 15,
+  "results": {
+    "depolarizing": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "maximum_possible_rank": 15,
+      "nullity": 0,
+      "complete": true,
+      "minimum_singular_value": 10.714476188783097,
+      "maximum_singular_value": 10.714476188783097
+    },
+    "nonlinear_depolarizing": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "maximum_possible_rank": 15,
+      "nullity": 0,
+      "complete": true,
+      "minimum_singular_value": 13.366622610068708,
+      "maximum_singular_value": 13.366622610068708
+    },
+    "phase_damping": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "maximum_possible_rank": 15,
+      "nullity": 0,
+      "complete": true,
+      "minimum_singular_value": 10.714476188783097,
+      "maximum_singular_value": 18.330302779823363
+    },
+    "nonlinear_phase": {
+      "matrix_shape": [
+        315,
+        15
+      ],
+      "rank": 15,
+      "maximum_possible_rank": 15,
+      "nullity": 0,
+      "complete": true,
+      "minimum_singular_value": 13.366622610068706,
+      "maximum_singular_value": 18.33030277982336
+    }
+  },
+  "scientific_note": "For two-qubit trace-one Hermitian states, the physical state space has 15 independent real parameters. Rank 15 indicates that the tested fingerprint map is informationally complete within the modeled operator space."
+}

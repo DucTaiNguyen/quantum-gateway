@@ -1,0 +1,29 @@
+{
+  "experiment": "QDK-027B",
+  "title": "Quantum Counterexample Search",
+  "seed": 20260907,
+  "trials": 300,
+  "noise_model": "two-qubit depolarizing channel",
+  "noise_points": 11,
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "fixed_spectrum": [
+    0.5,
+    0.25,
+    0.15,
+    0.1
+  ],
+  "best_pair": {
+    "i": 169,
+    "j": 237,
+    "state_distance_frobenius": 0.3631582979215141,
+    "fingerprint_distance": 0.09746369702740346
+  },
+  "counterexample_found": false,
+  "interpretation": "No exact fingerprint collision was found in this finite random search; this does not establish absence of counterexamples."
+}

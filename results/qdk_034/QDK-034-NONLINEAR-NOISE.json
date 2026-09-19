@@ -1,0 +1,37 @@
+{
+  "experiment": "QDK-034",
+  "title": "Nonlinear Noise Falsification",
+  "seed": 20260907,
+  "pairs": 20,
+  "noise_points": 20,
+  "results": {
+    "nonlinear_depolarizing": {
+      "mean_alpha": 1.9999999999999674,
+      "std_alpha": 1.8765334935480478e-13,
+      "min_alpha": 1.9999999999996838,
+      "max_alpha": 2.0000000000003464,
+      "mean_R2": 1.0,
+      "min_R2": 1.0,
+      "max_R2": 1.0
+    },
+    "nonlinear_phase": {
+      "mean_alpha": 1.9999999999999445,
+      "std_alpha": 3.2932333942862806e-13,
+      "min_alpha": 1.9999999999994065,
+      "max_alpha": 2.000000000000507,
+      "mean_R2": 1.0,
+      "min_R2": 1.0,
+      "max_R2": 1.0
+    },
+    "nonlinear_amplitude": {
+      "mean_alpha": 2.024000137956759,
+      "std_alpha": 0.019655066675318175,
+      "min_alpha": 2.0011157297264726,
+      "max_alpha": 2.0753715787085025,
+      "mean_R2": 0.9994596580699611,
+      "min_R2": 0.9973027957834789,
+      "max_R2": 0.9999989635239801
+    }
+  },
+  "interpretation": "Tests whether a nonlinear noise parameterization changes the observed scaling exponent. The experiment is a falsification/robustness test and does not itself establish a physical law."
+}

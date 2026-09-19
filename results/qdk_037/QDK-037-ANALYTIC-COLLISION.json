@@ -1,0 +1,52 @@
+{
+  "experiment": "QDK-037",
+  "title": "Analytic Collision Construction via Fingerprint Null Space",
+  "seed": 20260907,
+  "epsilon": 0.05,
+  "tolerance": 1e-10,
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "noise_points": 21,
+  "channels": [
+    "depolarizing",
+    "phase_damping",
+    "nonlinear_depolarizing",
+    "nonlinear_phase"
+  ],
+  "results": {
+    "depolarizing": {
+      "measurement_matrix_rank": 5,
+      "measurement_matrix_nullity": 11,
+      "fingerprint_difference": 0.0,
+      "state_distance": 0.0,
+      "constructive_collision": false
+    },
+    "phase_damping": {
+      "measurement_matrix_rank": 6,
+      "measurement_matrix_nullity": 10,
+      "fingerprint_difference": 0.0,
+      "state_distance": 0.09999999999999999,
+      "constructive_collision": true
+    },
+    "nonlinear_depolarizing": {
+      "measurement_matrix_rank": 5,
+      "measurement_matrix_nullity": 11,
+      "fingerprint_difference": 0.0,
+      "state_distance": 0.09999999999999998,
+      "constructive_collision": true
+    },
+    "nonlinear_phase": {
+      "measurement_matrix_rank": 6,
+      "measurement_matrix_nullity": 10,
+      "fingerprint_difference": 0.0,
+      "state_distance": 0.1,
+      "constructive_collision": true
+    }
+  },
+  "scientific_note": "A nonzero null space demonstrates that the restricted fingerprint map cannot be injective over the full operator space. A positive semidefinite constructive perturbation provides an explicit collision."
+}

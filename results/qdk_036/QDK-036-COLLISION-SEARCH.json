@@ -1,0 +1,75 @@
+{
+  "experiment": "QDK-036",
+  "title": "Constructive Quantum Fingerprint Collision Search",
+  "seed": 20260907,
+  "trials": 500,
+  "tolerance": 1e-08,
+  "spectrum": [
+    0.5,
+    0.25,
+    0.15,
+    0.1
+  ],
+  "noise_points": 21,
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "channels": [
+    "depolarizing",
+    "nonlinear_depolarizing",
+    "phase_damping",
+    "nonlinear_phase"
+  ],
+  "maximum_spectral_error": 5.551115123125783e-16,
+  "results": {
+    "depolarizing": {
+      "best_fingerprint_distance": 0.08753424840075565,
+      "corresponding_state_distance": 0.4950467581022339,
+      "best_pair": [
+        495,
+        498
+      ],
+      "exact_collision_found": false,
+      "near_collision_count": 0,
+      "collision_count": 0
+    },
+    "nonlinear_depolarizing": {
+      "best_fingerprint_distance": 0.10920153661397031,
+      "corresponding_state_distance": 0.4950467581022339,
+      "best_pair": [
+        495,
+        498
+      ],
+      "exact_collision_found": false,
+      "near_collision_count": 0,
+      "collision_count": 0
+    },
+    "phase_damping": {
+      "best_fingerprint_distance": 0.13241296178838377,
+      "corresponding_state_distance": 0.4950467581022339,
+      "best_pair": [
+        495,
+        498
+      ],
+      "exact_collision_found": false,
+      "near_collision_count": 0,
+      "collision_count": 0
+    },
+    "nonlinear_phase": {
+      "best_fingerprint_distance": 0.13788134787713033,
+      "corresponding_state_distance": 0.4950467581022339,
+      "best_pair": [
+        495,
+        498
+      ],
+      "exact_collision_found": false,
+      "near_collision_count": 0,
+      "collision_count": 0
+    }
+  },
+  "scientific_note": "Failure to find a collision in a finite random search does not establish injectivity. An exact collision would provide a constructive counterexample to injectivity for the tested fingerprint definition."
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "QDK-027",
+  "title": "Counterexample Search",
+  "seed": 20260907,
+  "trials": 10000,
+  "search_type": "random_fingerprint_collision_search",
+  "best_distance": 0.6058212851420165,
+  "counterexample_found": false,
+  "interpretation": "No exact fingerprint collision was found in this random search."
+}

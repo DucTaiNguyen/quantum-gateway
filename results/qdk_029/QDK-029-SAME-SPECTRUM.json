@@ -1,0 +1,19 @@
+{
+  "experiment": "QDK-029",
+  "title": "Same-Spectrum Structural Test",
+  "seed": 20260907,
+  "trials": 100,
+  "fixed_spectrum": [
+    0.5,
+    0.25,
+    0.15,
+    0.1
+  ],
+  "maximum_spectral_error": 4.440892098500626e-16,
+  "minimum_state_distance": 0.1769464675514084,
+  "maximum_state_distance": 0.5584959956478729,
+  "minimum_fingerprint_distance": 0.2502384704177382,
+  "median_fingerprint_distance": 1.367865623642529,
+  "maximum_fingerprint_distance": 2.4012880020893634,
+  "interpretation": "States with identical spectra can nevertheless produce different noise-response fingerprints under the tested observable/channel model."
+}

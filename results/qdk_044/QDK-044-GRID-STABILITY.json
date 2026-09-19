@@ -1,0 +1,310 @@
+{
+  "experiment": "QDK-044",
+  "title": "Grid Stability of CPTP Fingerprint Minimality",
+  "results": {
+    "phase_damping_cptp": {
+      "5": {
+        "points": 5,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "9": {
+        "points": 9,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "11": {
+        "points": 11,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "21": {
+        "points": 21,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "41": {
+        "points": 41,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "81": {
+        "points": 81,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      }
+    },
+    "nonlinear_phase_cptp": {
+      "5": {
+        "points": 5,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "9": {
+        "points": 9,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "11": {
+        "points": 11,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "21": {
+        "points": 21,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "41": {
+        "points": 41,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      },
+      "81": {
+        "points": 81,
+        "full_rank": 15,
+        "global_minimum_k": 15,
+        "minimal_subset_count": 1,
+        "minimal_subsets": [
+          [
+            "IX",
+            "IY",
+            "IZ",
+            "XI",
+            "XX",
+            "XY",
+            "XZ",
+            "YI",
+            "YX",
+            "YY",
+            "YZ",
+            "ZI",
+            "ZX",
+            "ZY",
+            "ZZ"
+          ]
+        ]
+      }
+    }
+  }
+}

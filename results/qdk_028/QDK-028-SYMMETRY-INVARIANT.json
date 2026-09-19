@@ -1,0 +1,18 @@
+{
+  "experiment": "QDK-028",
+  "title": "Symmetry-Invariant Quantum Noise Fingerprint",
+  "symmetry": "U = I tensor X",
+  "channel": "two-qubit depolarizing",
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "states_tested": 100,
+  "max_covariance_error": 0.0,
+  "tolerance": 1e-12,
+  "PASS": true,
+  "interpretation": "Fingerprint is invariant under the tested physical symmetry."
+}
