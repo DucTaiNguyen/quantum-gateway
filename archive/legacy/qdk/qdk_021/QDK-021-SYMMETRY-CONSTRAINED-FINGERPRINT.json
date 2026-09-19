@@ -1,0 +1,90 @@
+{
+  "experiment": "QDK-021",
+  "title": "Symmetry-Constrained Structural Fingerprint",
+  "symmetry": {
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "operator": "I tensor X",
+    "local_unitary": true
+  },
+  "p_points": 21,
+  "observables": [
+    "XX",
+    "YY",
+    "ZZ",
+    "ZI",
+    "IZ"
+  ],
+  "channels": {
+    "phase_damping": {
+      "structures": {
+        "STRUCTURED": {
+          "symmetry_covariance_error": 2.0
+        },
+        "WEAK": {
+          "symmetry_covariance_error": 2.0
+        },
+        "ASYMMETRIC": {
+          "symmetry_covariance_error": 2.0
+        }
+      },
+      "symmetry_covariance": {},
+      "between_structure_distances": {
+        "STRUCTURED_vs_WEAK": 2.3596320622553633e-15,
+        "STRUCTURED_vs_ASYMMETRIC": 6.4807406984078595,
+        "WEAK_vs_ASYMMETRIC": 6.4807406984078595
+      },
+      "symmetry_orbit_tests": {
+        "STRUCTURED": {
+          "state_transform_consistency": 0.0
+        },
+        "WEAK": {
+          "state_transform_consistency": 0.0
+        },
+        "ASYMMETRIC": {
+          "state_transform_consistency": 0.0
+        }
+      }
+    },
+    "amplitude_damping": {
+      "structures": {
+        "STRUCTURED": {
+          "symmetry_covariance_error": 2.0
+        },
+        "WEAK": {
+          "symmetry_covariance_error": 2.0
+        },
+        "ASYMMETRIC": {
+          "symmetry_covariance_error": 2.0
+        }
+      },
+      "symmetry_covariance": {},
+      "between_structure_distances": {
+        "STRUCTURED_vs_WEAK": 1.0337743943162178e-15,
+        "STRUCTURED_vs_ASYMMETRIC": 4.679675806854787,
+        "WEAK_vs_ASYMMETRIC": 4.679675806854787
+      },
+      "symmetry_orbit_tests": {
+        "STRUCTURED": {
+          "state_transform_consistency": 0.0
+        },
+        "WEAK": {
+          "state_transform_consistency": 0.0
+        },
+        "ASYMMETRIC": {
+          "state_transform_consistency": 0.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "phase_damping_covariance_pass": false,
+    "amplitude_damping_covariance_pass": false,
+    "phase_damping_max_error": 2.0,
+    "amplitude_damping_max_error": 2.0
+  }
+}

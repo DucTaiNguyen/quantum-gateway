@@ -1,0 +1,11 @@
+{
+  "experiment": "JNKA-EXP003",
+  "samples": 1530,
+  "baseline_r2": 0.6994124496712782,
+  "real_fingerprint_r2": 0.7142287785886328,
+  "shuffled_fingerprint_r2": 0.6996270671019422,
+  "delta_real": 0.014816328917354515,
+  "delta_shuffled": 0.00021461743066397698,
+  "ratio_real_to_shuffled": 69.03599987902288,
+  "interpretation": "A real-vs-shuffled comparison tests whether the predictive contribution survives destruction of fingerprint sample correspondence. It does not establish causality or fundamental physical information."
+}
