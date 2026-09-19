@@ -67,4 +67,10 @@ def tensor_to_state(tensor):
     if np.any(values < 0):
         raise ValueError("Reference encoder requires non-negative values")
 
-    return QuantumState(values.astype(complex))
+    state = values.astype(complex)
+    norm = np.linalg.norm(state)
+
+    if norm == 0:
+        raise ValueError("Tensor cannot encode the zero state")
+
+    return state / norm

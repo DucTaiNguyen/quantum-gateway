@@ -14,7 +14,7 @@ class InformationTensor:
         if norm == 0:
             raise ValueError("Cannot normalize zero tensor")
 
-        return InformationTensor(self.data / norm)
+        return self.data / norm
 
     def correlation(self):
         return np.corrcoef(self.data)
